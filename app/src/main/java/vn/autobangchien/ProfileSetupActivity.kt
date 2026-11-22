@@ -59,10 +59,11 @@ class ProfileSetupActivity : Activity() {
         right = field("Phải (%)", (p.region.right * 100).toString())
         bottom = field("Dưới (%)", (p.region.bottom * 100).toString())
         root.addView(TextView(this).apply {
-            text = "CÁCH NHẬP DỄ NHẤT
+            text = """CÁCH NHẬP DỄ NHẤT
 Nếu mới dùng, hãy giữ nguyên 4 giá trị mặc định 0 – 0 – 100 – 100 để lấy toàn bộ màn hình. Chỉ thay đổi khi bạn biết chắc vùng game nằm trong một phần màn hình. Các số là phần trăm: 0 = mép đầu, 100 = mép cuối. Ví dụ Phải = 90 nghĩa là kết thúc ở 90% chiều ngang màn hình.
-Lưu ý: bản hiện tại chưa có công cụ kéo khung trên ảnh; bạn không cần tự đo pixel."
-            setTextColor(0xFF55D6A0.toInt()); setPadding(0, dp(4), 0, dp(14))
+Lưu ý: bản hiện tại chưa có công cụ kéo khung trên ảnh; bạn không cần tự đo pixel."""
+            setTextColor(0xFF55D6A0.toInt())
+            setPadding(0, dp(4), 0, dp(14))
         })
         root.addView(row("Tên cấu hình", name))
         root.addView(row("Cạnh trái – mặc định 0", left))
